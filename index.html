@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>С Днём Рождения!</title>
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=general-sans@200,300,400,500,600,700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cursor glow -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+  
+  <!-- Canvas particles -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Scanline overlay (JJK + EVA pages) -->
+  <div id="scanlines" class="scanlines hidden" aria-hidden="true"></div>
+
+  <!-- Transition overlay -->
+  <div id="transition-overlay" aria-hidden="true"></div>
+
+  <!-- Lulux Easter Egg Popup -->
+  <div id="lulux-popup" class="lulux-popup hidden" role="dialog" aria-label="Easter egg">
+    <div class="lulux-inner">
+      <img src="https://i.redd.it/yl3n7mnyky671.jpg" alt="Lulux meme" class="lulux-img">
+      <button class="lulux-close" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
+  <!-- ===== HUB PAGE ===== -->
+  <section id="hub" class="page hub active" data-accent="#4f98a3" data-bg="#0a0a0f">
+    <div class="hub-content">
+      <h1 class="hub-title glitch-text" data-text="С ДНЁМ РОЖДЕНИЯ!">С ДНЁМ РОЖДЕНИЯ!</h1>
+      <p class="hub-subtitle">Этот сайт создан специально для тебя</p>
+      
+      <div class="portal-grid">
+        <!-- Soul Eater -->
+        <button class="portal" data-target="soul-eater-maka" data-accent="#c41e3a" aria-label="Soul Eater">
+          <div class="portal-ring" style="--accent: #c41e3a"></div>
+          <div class="portal-img-wrap">
+            <img src="https://images6.alphacoders.com/502/502652.jpg" alt="Soul Eater" loading="lazy">
+          </div>
+          <span class="portal-label">Soul Eater</span>
+        </button>
+
+        <!-- League of Legends -->
+        <button class="portal" data-target="lol-lux" data-accent="#9b4dca" aria-label="League of Legends">
+          <div class="portal-ring" style="--accent: #9b4dca"></div>
+          <div class="portal-img-wrap">
+            <img src="https://lolskinshop.com/wp-content/uploads/2020/03/loading-screen-dark-cosmic-lux.jpg" alt="League of Legends" loading="lazy">
+          </div>
+          <span class="portal-label">League of Legends</span>
+        </button>
+
+        <!-- JJK -->
+        <button class="portal" data-target="jjk-gojo" data-accent="#1e90ff" aria-label="Магическая Битва">
+          <div class="portal-ring" style="--accent: #1e90ff"></div>
+          <div class="portal-img-wrap">
+            <img src="https://wallpapercave.com/wp/wp13626054.jpg" alt="Магическая Битва" loading="lazy">
+          </div>
+          <span class="portal-label">Магическая Битва</span>
+        </button>
+
+        <!-- Maid Sama -->
+        <button class="portal" data-target="maid-usui" data-accent="#d4a574" aria-label="Мейд-Сама">
+          <div class="portal-ring" style="--accent: #d4a574"></div>
+          <div class="portal-img-wrap">
+            <img src="https://wallpapers.com/images/hd/kaichou-wa-maid-sama-usui-takumi-962aze2wmgih4z4o.jpg" alt="Мейд-Сама" loading="lazy">
+          </div>
+          <span class="portal-label">Мейд-Сама</span>
+        </button>
+
+        <!-- Stardew Valley -->
+        <button class="portal" data-target="stardew" data-accent="#5b8c5a" aria-label="Stardew Valley">
+          <div class="portal-ring" style="--accent: #5b8c5a"></div>
+          <div class="portal-img-wrap">
+            <img src="https://wallpapers.com/images/hd/stardew-valley-stargazing-dd1bbzwykl2327cc.jpg" alt="Stardew Valley" loading="lazy">
+          </div>
+          <span class="portal-label">Stardew Valley</span>
+        </button>
+
+        <!-- Evangelion -->
+        <button class="portal" data-target="eva-shinji" data-accent="#4B0082" aria-label="Евангелион">
+          <div class="portal-ring" style="--accent: #4B0082"></div>
+          <div class="portal-img-wrap">
+            <img src="https://wallpapers-clan.com/wp-content/uploads/2023/06/evangelion-shinji-ikari-dark-background.jpg" alt="Евангелион" loading="lazy">
+          </div>
+          <span class="portal-label">Евангелион</span>
+        </button>
+      </div>
+
+      <a href="#" class="letter-link" data-target="letter">✉ Послание</a>
+    </div>
+  </section>
+
+  <!-- ===== SOUL EATER — MAKA ===== -->
+  <section id="soul-eater-maka" class="page anime-page hidden" 
+    data-accent="#c41e3a" data-bg="#0a0a0a" data-anime="soul-eater"
+    data-particle-color="255,80,40" data-particle-type="embers">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout side-right">
+      <div class="page-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #c41e3a">SOUL EATER — Мака Альбарн</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder video"><span>🎬 Видео</span></div>
+        </div>
+      </div>
+      <div class="character-art side-portrait right">
+        <img src="https://i.redd.it/l3vzq3gfnfye1.png" alt="Мака Альбарн" data-parallax>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="Soul Eater sub-pages">
+      <button class="sub-nav-btn active" data-target="soul-eater-maka">
+        <img src="https://i.redd.it/l3vzq3gfnfye1.png" alt="Мака" class="sub-nav-thumb">
+        <span>Мака</span>
+      </button>
+      <button class="sub-nav-btn" data-target="soul-eater-stein">
+        <img src="https://wallpapers.com/images/hd/intriguing-soul-eater-dr-stein-anime-image-hmdffq75titagb3o.jpg" alt="Штейн" class="sub-nav-thumb">
+        <span>Штейн</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== SOUL EATER — STEIN ===== -->
+  <section id="soul-eater-stein" class="page anime-page hidden"
+    data-accent="#556b2f" data-bg="#0a0a0a" data-anime="soul-eater"
+    data-particle-color="100,140,60" data-particle-type="mist">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout side-left">
+      <div class="character-art side-portrait left bottom-up">
+        <img src="https://wallpapers.com/images/hd/intriguing-soul-eater-dr-stein-anime-image-hmdffq75titagb3o.jpg" alt="Профессор Штейн" data-parallax>
+      </div>
+      <div class="page-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #556b2f">Профессор Штейн</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder video"><span>🎬 Видео</span></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="Soul Eater sub-pages">
+      <button class="sub-nav-btn" data-target="soul-eater-maka">
+        <img src="https://i.redd.it/l3vzq3gfnfye1.png" alt="Мака" class="sub-nav-thumb">
+        <span>Мака</span>
+      </button>
+      <button class="sub-nav-btn active" data-target="soul-eater-stein">
+        <img src="https://wallpapers.com/images/hd/intriguing-soul-eater-dr-stein-anime-image-hmdffq75titagb3o.jpg" alt="Штейн" class="sub-nav-thumb">
+        <span>Штейн</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== LOL — LUX ===== -->
+  <section id="lol-lux" class="page anime-page hidden"
+    data-accent="#9b4dca" data-bg="#1e0033" data-anime="lol"
+    data-particle-color="180,100,220" data-particle-type="cosmic">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-bg-subtle">
+      <img src="https://i.redd.it/vqh3500gzhk41.jpg" alt="" aria-hidden="true">
+    </div>
+
+    <div class="page-layout side-right">
+      <div class="page-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #9b4dca">DARK COSMIC — Люкс</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder video"><span>🎬 Видео</span></div>
+        </div>
+      </div>
+      <div class="character-art side-portrait right">
+        <img src="https://lolskinshop.com/wp-content/uploads/2020/03/loading-screen-dark-cosmic-lux.jpg" alt="Dark Cosmic Lux" data-parallax>
+        <button class="easter-egg-btn" id="lulux-trigger" aria-label="Секрет">?</button>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="LoL sub-pages">
+      <button class="sub-nav-btn active" data-target="lol-lux">
+        <img src="https://lolskinshop.com/wp-content/uploads/2020/03/loading-screen-dark-cosmic-lux.jpg" alt="Люкс" class="sub-nav-thumb">
+        <span>Люкс</span>
+      </button>
+      <button class="sub-nav-btn" data-target="lol-soraka">
+        <img src="https://i.redd.it/k040v1v207b91.jpg" alt="Сорака" class="sub-nav-thumb">
+        <span>Сорака</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== LOL — SORAKA ===== -->
+  <section id="lol-soraka" class="page anime-page hidden"
+    data-accent="#7c3aed" data-bg="#0a001a" data-anime="lol"
+    data-particle-color="200,180,80" data-particle-type="sparkle">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout centered-bg">
+      <div class="bg-art">
+        <img src="https://i.redd.it/k040v1v207b91.jpg" alt="" aria-hidden="true">
+        <div class="bg-overlay"></div>
+      </div>
+      <div class="page-content centered">
+        <h2 class="section-title neon-glow" style="--glow-color: #7c3aed">Сорака</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="LoL sub-pages">
+      <button class="sub-nav-btn" data-target="lol-lux">
+        <img src="https://lolskinshop.com/wp-content/uploads/2020/03/loading-screen-dark-cosmic-lux.jpg" alt="Люкс" class="sub-nav-thumb">
+        <span>Люкс</span>
+      </button>
+      <button class="sub-nav-btn active" data-target="lol-soraka">
+        <img src="https://i.redd.it/k040v1v207b91.jpg" alt="Сорака" class="sub-nav-thumb">
+        <span>Сорака</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== JJK — GOJO ===== -->
+  <section id="jjk-gojo" class="page anime-page has-scanlines hidden"
+    data-accent="#1e90ff" data-bg="#0a0a1e" data-anime="jjk"
+    data-particle-color="30,144,255" data-particle-type="sparks">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout side-left">
+      <div class="character-art side-portrait left">
+        <img src="https://wallpapercave.com/wp/wp13626054.jpg" alt="Годжо Сатору" data-parallax>
+      </div>
+      <div class="page-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #1e90ff">無下限 — Годжо Сатору</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder video"><span>🎬 Видео</span></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="JJK sub-pages">
+      <button class="sub-nav-btn active" data-target="jjk-gojo">
+        <img src="https://wallpapercave.com/wp/wp13626054.jpg" alt="Годжо" class="sub-nav-thumb">
+        <span>Годжо</span>
+      </button>
+      <button class="sub-nav-btn" data-target="jjk-toji">
+        <img src="https://i.redd.it/toji-fushiguro-jujutsu-kaisen-manga-depth-effect-optimized-v0-aikj602gh3we1.jpg" alt="Тодзи" class="sub-nav-thumb">
+        <span>Тодзи</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== JJK — TOJI ===== -->
+  <section id="jjk-toji" class="page anime-page has-scanlines hidden"
+    data-accent="#2d5a27" data-bg="#0a0a0a" data-anime="jjk"
+    data-particle-color="45,90,39" data-particle-type="mist">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout side-right">
+      <div class="page-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #2d5a27">Убийца богов — Тодзи</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder video"><span>🎬 Видео</span></div>
+        </div>
+      </div>
+      <div class="character-art side-portrait right bottom-up">
+        <img src="https://i.redd.it/toji-fushiguro-jujutsu-kaisen-manga-depth-effect-optimized-v0-aikj602gh3we1.jpg" alt="Тодзи Фушигуро" data-parallax>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="JJK sub-pages">
+      <button class="sub-nav-btn" data-target="jjk-gojo">
+        <img src="https://wallpapercave.com/wp/wp13626054.jpg" alt="Годжо" class="sub-nav-thumb">
+        <span>Годжо</span>
+      </button>
+      <button class="sub-nav-btn active" data-target="jjk-toji">
+        <img src="https://i.redd.it/toji-fushiguro-jujutsu-kaisen-manga-depth-effect-optimized-v0-aikj602gh3we1.jpg" alt="Тодзи" class="sub-nav-thumb">
+        <span>Тодзи</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== MAID SAMA — USUI ===== -->
+  <section id="maid-usui" class="page anime-page hidden"
+    data-accent="#d4a574" data-bg="#1a1019" data-anime="maid"
+    data-particle-color="212,165,116" data-particle-type="sparkle">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout side-right">
+      <div class="page-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #d4a574">会長はメイド様! — Усуи Такуми</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder video"><span>🎬 Видео</span></div>
+        </div>
+      </div>
+      <div class="character-art side-portrait right">
+        <img src="https://wallpapers.com/images/hd/kaichou-wa-maid-sama-usui-takumi-962aze2wmgih4z4o.jpg" alt="Усуи Такуми" data-parallax>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="Maid Sama sub-pages">
+      <button class="sub-nav-btn active" data-target="maid-usui">
+        <img src="https://wallpapers.com/images/hd/kaichou-wa-maid-sama-usui-takumi-962aze2wmgih4z4o.jpg" alt="Усуи" class="sub-nav-thumb">
+        <span>Усуи</span>
+      </button>
+      <button class="sub-nav-btn" data-target="maid-misaki">
+        <img src="https://wallpapers.com/images/hd/powerful-misaki-ayuzawa-of-maid-sama-y8mpg723l1o1x46g.jpg" alt="Мисаки" class="sub-nav-thumb">
+        <span>Мисаки</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== MAID SAMA — MISAKI ===== -->
+  <section id="maid-misaki" class="page anime-page hidden"
+    data-accent="#e8a0bf" data-bg="#1a0a14" data-anime="maid"
+    data-particle-color="232,160,191" data-particle-type="petals">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout side-left">
+      <div class="character-art side-portrait left">
+        <img src="https://wallpapers.com/images/hd/powerful-misaki-ayuzawa-of-maid-sama-y8mpg723l1o1x46g.jpg" alt="Мисаки Аюдзава" data-parallax>
+      </div>
+      <div class="page-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #e8a0bf">Мисаки Аюдзава</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder video"><span>🎬 Видео</span></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="Maid Sama sub-pages">
+      <button class="sub-nav-btn" data-target="maid-usui">
+        <img src="https://wallpapers.com/images/hd/kaichou-wa-maid-sama-usui-takumi-962aze2wmgih4z4o.jpg" alt="Усуи" class="sub-nav-thumb">
+        <span>Усуи</span>
+      </button>
+      <button class="sub-nav-btn active" data-target="maid-misaki">
+        <img src="https://wallpapers.com/images/hd/powerful-misaki-ayuzawa-of-maid-sama-y8mpg723l1o1x46g.jpg" alt="Мисаки" class="sub-nav-thumb">
+        <span>Мисаки</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== STARDEW VALLEY ===== -->
+  <section id="stardew" class="page anime-page hidden"
+    data-accent="#5b8c5a" data-bg="#0a0a1e" data-anime="stardew"
+    data-particle-color="230,200,80" data-particle-type="fireflies">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout centered-bg">
+      <div class="bg-art">
+        <img src="https://wallpapers.com/images/hd/stardew-valley-stargazing-dd1bbzwykl2327cc.jpg" alt="" aria-hidden="true">
+        <div class="bg-overlay stardew-overlay"></div>
+      </div>
+      <div class="page-content centered stardew-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #5b8c5a">⭐ Звёздная Долина</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder video"><span>🎬 Видео</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVANGELION — SHINJI ===== -->
+  <section id="eva-shinji" class="page anime-page has-scanlines hidden"
+    data-accent="#4B0082" data-bg="#0a0a0a" data-anime="eva"
+    data-particle-color="75,0,130" data-particle-type="hexagons">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout side-left">
+      <div class="character-art side-portrait left">
+        <img src="https://wallpapers-clan.com/wp-content/uploads/2023/06/evangelion-shinji-ikari-dark-background.jpg" alt="Синдзи Икари" data-parallax>
+      </div>
+      <div class="page-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #4B0082">EVANGELION — Синдзи Икари</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder video"><span>🎬 Видео</span></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="Evangelion sub-pages">
+      <button class="sub-nav-btn active" data-target="eva-shinji">
+        <img src="https://wallpapers-clan.com/wp-content/uploads/2023/06/evangelion-shinji-ikari-dark-background.jpg" alt="Синдзи" class="sub-nav-thumb">
+        <span>Синдзи</span>
+      </button>
+      <button class="sub-nav-btn" data-target="eva-asuka">
+        <img src="https://4kwallpapers.com/images/wallpapers/asuka-langley-soryu-3840x2743-14071.jpg" alt="Аска" class="sub-nav-thumb">
+        <span>Аска</span>
+      </button>
+      <button class="sub-nav-btn" data-target="eva-rei">
+        <img src="https://4kwallpapers.com/images/wallpapers/rei-ayanami-amoled-1080x2340-15725.jpg" alt="Рей" class="sub-nav-thumb">
+        <span>Рей</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== EVANGELION — ASUKA ===== -->
+  <section id="eva-asuka" class="page anime-page has-scanlines hidden"
+    data-accent="#ff4500" data-bg="#1a0a0a" data-anime="eva"
+    data-particle-color="255,69,0" data-particle-type="sparks">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout side-right">
+      <div class="page-content">
+        <h2 class="section-title neon-glow" style="--glow-color: #ff4500">Аска Лэнгли Сорью</h2>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+        </div>
+      </div>
+      <div class="character-art side-portrait right bottom-up">
+        <img src="https://4kwallpapers.com/images/wallpapers/asuka-langley-soryu-3840x2743-14071.jpg" alt="Аска Лэнгли" data-parallax>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="Evangelion sub-pages">
+      <button class="sub-nav-btn" data-target="eva-shinji">
+        <img src="https://wallpapers-clan.com/wp-content/uploads/2023/06/evangelion-shinji-ikari-dark-background.jpg" alt="Синдзи" class="sub-nav-thumb">
+        <span>Синдзи</span>
+      </button>
+      <button class="sub-nav-btn active" data-target="eva-asuka">
+        <img src="https://4kwallpapers.com/images/wallpapers/asuka-langley-soryu-3840x2743-14071.jpg" alt="Аска" class="sub-nav-thumb">
+        <span>Аска</span>
+      </button>
+      <button class="sub-nav-btn" data-target="eva-rei">
+        <img src="https://4kwallpapers.com/images/wallpapers/rei-ayanami-amoled-1080x2340-15725.jpg" alt="Рей" class="sub-nav-thumb">
+        <span>Рей</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== EVANGELION — REI ===== -->
+  <section id="eva-rei" class="page anime-page has-scanlines hidden"
+    data-accent="#4169E1" data-bg="#0a0a14" data-anime="eva"
+    data-particle-color="65,105,225" data-particle-type="motes">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+    <button class="letter-icon" data-target="letter" aria-label="Послание">✉</button>
+
+    <div class="page-layout centered-char">
+      <div class="page-content centered">
+        <h2 class="section-title neon-glow" style="--glow-color: #4169E1">Рей Аянами</h2>
+        <div class="rei-center-art">
+          <img src="https://4kwallpapers.com/images/wallpapers/rei-ayanami-amoled-1080x2340-15725.jpg" alt="Рей Аянами" data-parallax>
+        </div>
+        <div class="placeholders">
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+          <div class="placeholder photo"><span>📷 Фото</span></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sub-nav" aria-label="Evangelion sub-pages">
+      <button class="sub-nav-btn" data-target="eva-shinji">
+        <img src="https://wallpapers-clan.com/wp-content/uploads/2023/06/evangelion-shinji-ikari-dark-background.jpg" alt="Синдзи" class="sub-nav-thumb">
+        <span>Синдзи</span>
+      </button>
+      <button class="sub-nav-btn" data-target="eva-asuka">
+        <img src="https://4kwallpapers.com/images/wallpapers/asuka-langley-soryu-3840x2743-14071.jpg" alt="Аска" class="sub-nav-thumb">
+        <span>Аска</span>
+      </button>
+      <button class="sub-nav-btn active" data-target="eva-rei">
+        <img src="https://4kwallpapers.com/images/wallpapers/rei-ayanami-amoled-1080x2340-15725.jpg" alt="Рей" class="sub-nav-thumb">
+        <span>Рей</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- ===== LETTER PAGE ===== -->
+  <section id="letter" class="page letter-page hidden"
+    data-accent="#8b5cf6" data-bg="#0a0a14"
+    data-particle-color="139,92,246" data-particle-type="stars">
+    <button class="back-btn" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l7 7m-7-7l7-7"/></svg>
+    </button>
+
+    <div class="letter-content">
+      <h2 class="section-title neon-glow" style="--glow-color: #8b5cf6">Послание</h2>
+      <div class="letter-text-area">
+        <p class="letter-placeholder">Здесь будет твоё личное послание...</p>
+      </div>
+      <div class="placeholders letter-placeholders">
+        <div class="placeholder photo"><span>📷 Фото</span></div>
+        <div class="placeholder photo"><span>📷 Фото</span></div>
+        <div class="placeholder photo"><span>📷 Фото</span></div>
+        <div class="placeholder video"><span>🎬 Видео</span></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>

@@ -162,7 +162,7 @@ const Router = {
       evaTimer = setTimeout(() => {
         evaTimer = null;
         triggerReiInterruption();
-      }, 10000);
+      }, 25000);
     }
 
     function stopEvaTimer() {
